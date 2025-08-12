@@ -35,4 +35,4 @@ This project examines how **state-level demographics**—including obesity score
 - **Highest median household income:** 1) Maryland  2) New Jersey  3) Massachusetts  4) Hawaii  5) Connecticut
 
 ## 📌 Future Work
-- Fit statistical models (e.g., **multinomial/logistic regression**) to estimate adjusted associations between demographics and most-popular chain.
+Fit statistical models (e.g., **multinomial/logistic regression**) to estimate adjusted associations between demographics and most-popular chain.
