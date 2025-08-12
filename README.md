@@ -1,50 +1,38 @@
 # 🍔 US State Fast Food & Demographics Analysis
 
 ## 📌 Overview
-[Summarize the project aim, research question, and relevance.]
-In this project, we answer the central question: How is fast food restaurant choice across the US states affected by the number of given fast food restaurants in each state, obesity rates, unemployment rates, 
-and median household income? The answer to this question informs these various fast food restaurants how they can gain more customers in the future, considering demographic information.
+This project examines how **state-level demographics**—including obesity scores, unemployment rates, and median household income—relate to **fast-food restaurant choice** across U.S. states. Insights can inform fast-food brands seeking growth strategies.
 
 ## 📊 Data
-- **Sources:**
-  - [Obesity Scores](https://wallethub.com/edu/fattest-states/16585)
-  - [Number of fast food restaurants per state](https://www.nicerx.com/fast-food-capitals/)
-  - [US State Median Household Income](https://worldpopulationreview.com/state-rankings/median-household-income-by-state)
-  - [US State Unemployment Rates](https://worldpopulationreview.com/state-rankings/unemployment-rate-by-state)
-  - [US State Most Popular Fast Food Restaurants](https://worldpopulationreview.com/state-rankings/most-popular-fast-food-by-state)
-- **Description:**
-  - **Obesity Scores:** `Overall Rank*`, `State`, `Total Score`, `Overweight & Obesity Prevalence`, `Health Consequences`, `Food & Fitness`
-  - **Number of fast food restaurants per state:** `State`, `All fast food restaurants`, `Full-service restaurants`
-  - **US State Median Household Income:** `State`, `HouseholdIncome`
-  - **US State Unemployment Rate:** `State`, `rate22`, `rate21`
-  - **US State Most Popular Fast Food Restaurants** `State`, `MostPopular`
-- **Target:** Most popular fast food restaurants.
-- **Size (approx.):** Obesity Scores ≈ 50 × 6; Number of fast food restaurants per state ≈ 50 × 11; US State Median Household Income ≈ 50 × 2; US State Unemployment Rate ≈ 50 × 3; US State Most Popular Fast Food Restaurants ≈ 50 × 2
+- **Sources**
+  - Obesity scores: https://wallethub.com/edu/fattest-states/16585
+  - Restaurant counts per state: https://www.nicerx.com/fast-food-capitals/
+  - Median household income by state: https://worldpopulationreview.com/state-rankings/median-household-income-by-state
+  - Unemployment rates by state: https://worldpopulationreview.com/state-rankings/unemployment-rate-by-state
+  - Most popular fast-food by state: https://worldpopulationreview.com/state-rankings/most-popular-fast-food-by-state
+- **Description**
+  - **Obesity:** `Overall Rank*`, `State`, `Total Score`, `Overweight & Obesity Prevalence`, `Health Consequences`, `Food & Fitness`
+  - **Restaurant counts:** `State`, `All fast food restaurants`, `Full-service restaurants`
+  - **Income:** `State`, `HouseholdIncome`
+  - **Unemployment:** `State`, `rate22`, `rate21`
+  - **Most popular chain:** `State`, `MostPopular`
+- **Target:** `MostPopular` (state’s most popular fast-food restaurant).
+- **Size (approx.):** Obesity ≈ 50×6; Counts ≈ 50×11; Income ≈ 50×2; Unemployment ≈ 50×3; Popularity ≈ 50×2.
 
 ## 🛠️ Methods
-- **Data gathering & preprocessing:** Web scraping (Python), manipulating data to be tidy, combining data, creating database, creating tables in database, populating tables in database
-- **EDA:** Visualizations including Cloropleth map, bar plots
-- **Correlation Analysis:** Visualizations including stacked bar plots, bar plots, and comparative box plots
+- **Data gathering & preprocessing:** Web scraping (Python), tidy reshaping, cross-source merges, database table creation and population.
+- **EDA:** Choropleth map(s), bar charts.
+- **Correlation/association:** Stacked bars, groupwise comparisons, and comparative boxplots.
 
 ## 📈 Results
-- On average, states who had Chick-fil-a or McDonalds as their most popular fast food restaurant saw higher obesity scores. 
-- There is a correlation between median income and total obesity scores. The lower a state's median income, the higher a state's obesity score was.
-- Generally, states who had In-N-Out or Panda Express as their most popular fast food restaurant saw higher median household income. Chick-Fil-A saw lower median household income. 
--There seemed to be more Dunkin Donuts per 100,000 people in the states that had McDonalds as their favorite fast food restaurant. There seemed to be more McDonalds per 100,000 people in the states that had In-N-Out as their favorite fast food restaurant. 
--2021 saw much higher average unemployment rates than 2022 did. 
--All of the states in the southeast and southwest region with the exception of West Virginia all had Chick-fil-a as their most popular fast food restaurant.
--The least healthy states based on our data are:
-West Virginia
-Mississippi
-Kentucky
-Alabama
-Arkansas
--The highest median household income states are:
-Maryland
-New Jersey
-Massachusetts
-Hawaii
-Connecticut
+- States whose **most popular chain** is **Chick-fil-A** or **McDonald’s** show **higher obesity scores** on average (in this dataset).
+- **Median household income** is **negatively associated** with total obesity scores (lower income ↔ higher obesity score).
+- States where **In-N-Out** or **Panda Express** are most popular tend to have **higher median household incomes**, while **Chick-fil-A** states skew lower.
+- Restaurant density patterns: more **Dunkin’** per 100k people in states favoring **McDonald’s**; more **McDonald’s** per 100k where **In-N-Out** is most popular.
+- **Unemployment**: 2021 averages were **higher** than 2022 across states.
+- **Regional pattern**: Most states in the **Southeast/Southwest** (except West Virginia) list **Chick-fil-A** as most popular.
+- **Least healthy (by our composite obesity data):** 1) West Virginia  2) Mississippi  3) Kentucky  4) Alabama  5) Arkansas
+- **Highest median household income:** 1) Maryland  2) New Jersey  3) Massachusetts  4) Hawaii  5) Connecticut
 
 ## 📌 Future Work
-In the future, statistical models such as logistic regression could be conducted to get a more concrete estimate on the relationship between state demographics and fast food restaurant choice. 
+- Fit statistical models (e.g., **multinomial/logistic regression**) to estimate adjusted associations between demographics and most-popular chain.
