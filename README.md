@@ -25,7 +25,7 @@ This project examines how **state-level demographics**—including obesity score
 - **Correlation/association:** Stacked bars, groupwise comparisons, and comparative boxplots.
 
 ## 📈 Results
-![Most Popular Fast Food Restaurant by State and Obesity Score](figures/Screenshot 2025-08-12 130424.png)
+![Most Popular Fast Food Restaurant by State and Obesity Score](figures/Screenshot-2025-08-12-130424.png)
 
 - States whose **most popular chain** is **Chick-fil-A** or **McDonald’s** show **higher obesity scores** on average (in this dataset).
 - **Median household income** is **negatively associated** with total obesity scores (lower income ↔ higher obesity score).
